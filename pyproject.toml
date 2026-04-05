@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "gitme-cli"
+version = "0.1.0"
+description = "AI-powered git commit message generator"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "click>=8.0",
+    "rich>=13.0",
+    "pyperclip>=1.8",
+    "requests>=2.28",
+]
+
+[project.scripts]
+gitme = "gitme.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["gitme"]
