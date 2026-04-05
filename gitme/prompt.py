@@ -37,3 +37,6 @@ Output rules:
 - output the commit message only
 - no explanations, no preamble, no markdown code fences
 """
+
+def build_prompt(diff: str) -> str:
+    return f"Here is the staged git diff to write a commit message for:\n\n{diff}"
